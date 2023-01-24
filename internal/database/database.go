@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/jmoiron/sqlx"
+	"github.com/zhas-off/grpc-service/internal/rocket"
 )
 
 type Store struct {
@@ -36,4 +37,16 @@ func New() (Store, error) {
 	return Store{
 		db: db,
 	}, nil
+}
+
+func (s Store) GetRocketById(id string) (rocket.Rocket, error) {
+	return rocket.Rocket{}, nil
+}
+
+func (s Store) InsertRocket(rkt rocket.Rocket) (rocket.Rocket, error) {
+	return rocket.Rocket{}, nil
+}
+
+func (s Store) DeleteRocket(id string) error {
+	return nil
 }
